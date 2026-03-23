@@ -1,2 +1,32 @@
-# Family-is-the-most-important-thing
-TravelTech: a travel planning service. Service Description:  The service allows users to plan their trip: select tickets, hotels, transfers, and activities. All bookings are synced in a single interface, and the system provides recommendations based on interests and travel history.
+# Travel Planner - Collaborative Trip Planning System
+
+## О проекте
+
+**Travel Planner** — распределенная система для совместного планирования путешествий, позволяющая группам пользователей синхронно и асинхронно добавлять, редактировать и согласовывать элементы поездки (рейсы, отели, активности) с поддержкой оффлайн-режима и автоматическим разрешением конфликтов.
+
+### Ключевые возможности
+
+| Возможность | Описание |
+|-------------|----------|
+| **Совместное планирование** | Несколько пользователей одновременно работают над планом поездки |
+| **Real-time синхронизация** | Изменения видны всем участникам с задержкой < 2 секунд |
+| **Оффлайн-режим** | Работа без интернета с последующей синхронизацией |
+| **Автоматическое разрешение конфликтов** | Интеллектуальные стратегии мержа изменений |
+| **Масштабируемая архитектура** | Поддержка тысяч параллельных поездок |
+| **Безопасность данных** | Маркировка чувствительной информации, аудит изменений |
+
+
+### Технологический стек
+
+| Компонент | Технология | Назначение |
+|-----------|-----------|------------|
+| **Клиент** | React + TypeScript + IndexedDB | UI, оффлайн-хранилище |
+| **API** | Express.js + WebSocket | REST API, real-time уведомления |
+| **База данных** | PostgreSQL 15 | Event Store, ACID транзакции |
+| **Очередь** | Apache Kafka | Буферизация событий |
+| **Stream Processing** | Apache Flink | Real-time валидация, детекция конфликтов |
+| **Batch Processing** | Apache Spark | Разрешение конфликтов, агрегация |
+| **Lakehouse** | Apache Iceberg + S3 | Версионированное хранение |
+| **Кэш** | Redis | Read models, сессии |
+| **Оркестрация** | Apache Airflow | Управление пайплайнами |
+
